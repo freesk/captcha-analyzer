@@ -1,21 +1,25 @@
-### Captcha Analyzer
+# Captcha Analyzer
 
-The program uses [ocrad](https://www.gnu.org/software/ocrad/) to analyze a number based captcha image of a certain layout.   
-     
-![alt tag](https://i.imgur.com/JCICoqn.png)    
+Reads numeric CAPTCHAs using image cleanup and OCR.
 
-The image gets broken into pieces and then every piece gets cleaned from lines and noise. The following step is actual analyzation by [ocrad](https://www.gnu.org/software/ocrad/) of every piece. Finally, the program prints the result into the console.    
+The program uses [ocrad](https://www.gnu.org/software/ocrad/) to read a number-based CAPTCHA image with a specific layout.
 
-To run the jar file you need to install [ocrad](https://www.gnu.org/software/ocrad/) and [imagemagick](https://www.imagemagick.org/script/index.php).     
+![CAPTCHA layout](https://i.imgur.com/JCICoqn.png)
+
+The image is split into pieces, and each piece is cleaned of lines and noise. Next, ocrad analyzes each piece. Finally, the program prints the result to the console.
+
+## Requirements
+
+To run the jar file, you need to install [ocrad](https://www.gnu.org/software/ocrad/) and [ImageMagick](https://www.imagemagick.org/script/index.php):
 
 ```
-brew install imagemagick
+brew install ocrad imagemagick
 ```
 
-To install [ocrad](https://www.gnu.org/software/ocrad/) you need to download its [source](http://download.savannah.gnu.org/releases/ocrad/) and compile it.
+Alternatively, you can download the ocrad [source](http://download.savannah.gnu.org/releases/ocrad/) and compile it yourself.
 
 Tested on macOS Sierra only.
 
-Example   
+## Example
 
 <img src="https://i.imgur.com/vTcbyI1.jpg" width="490">
